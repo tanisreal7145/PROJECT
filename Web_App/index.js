@@ -119,6 +119,19 @@ const strRef = storageRef(storage,'Record/')
     
 }
 soil.onchange = function() {
+  if(this.value > 100){
+    Swal.fire({
+      title: "กรุณาใส่ค่าไม่เกิน 100 %",
+      icon: "error",
+      showClass: {
+          popup: "animate__animated animate__fadeInUp animate__faster"
+      },
+      hideClass: {
+          popup: "animate__animated animate__fadeOutDown animate__faster"
+      }
+    });
+    this.value = data.soilmoisture;
+  }
   if(this.value===""){
     Swal.fire({
       title: "ห้ามใส่ค่าว่าง!",
@@ -129,11 +142,25 @@ soil.onchange = function() {
       hideClass: {
           popup: "animate__animated animate__fadeOutDown animate__faster"
       }
-  });
+    });
     this.value = data.soilmoisture;
   }
 };
 lux.onchange = function() {
+  
+  if(this.value > 9999){
+    Swal.fire({
+      title: "กรุณาใส่ค่าไม่เกิน 9999 LUX",
+      icon: "error",
+      showClass: {
+          popup: "animate__animated animate__fadeInUp animate__faster"
+      },
+      hideClass: {
+          popup: "animate__animated animate__fadeOutDown animate__faster"
+      }
+    });
+    this.value =  data.lux;
+  }
   if(this.value===""){
     Swal.fire({
       title: "ห้ามใส่ค่าว่าง!",
