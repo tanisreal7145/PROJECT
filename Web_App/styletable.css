@@ -17,9 +17,9 @@ body {
 .card {
     background-color: white;
     box-shadow: 2px 2px 12px 1px rgba(140, 140, 140, .5);
-    padding: 5%;
+    padding: 2%;
     border-radius: 8px; /* เพิ่มมุมของการ์ด */
-    margin-bottom: 20px; /* เพิ่มระยะห่างระหว่างการ์ด */
+    margin-bottom: 10px; /* เพิ่มระยะห่างระหว่างการ์ด */
 }
 
 .cards {
@@ -33,6 +33,14 @@ body {
 .reading {
     color: #193036;
 }
+@media screen and (max-width: 768px) {
+    #theader th {
+        font-family: 'Prompt', sans-serif;
+        font-size: 0.5rem; /* ลดขนาดตัวอักษรเมื่อเป็นมือถือ */
+        padding: 8px; /* ปรับขนาดการเว้นระยะของส่วนหัว */
+    }
+}
+
 
 .date-time {
     font-size: 0.8rem;
